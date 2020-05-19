@@ -5,8 +5,10 @@ edit_uri: ''
 plugins:
   - search
   - mkdocs-versioning:
-      version: 1.0.0
+      version: 2.0.0
 
 nav:
   - Home: 'index.md'
+  - Meta APIs:
+      - List Accounts: 'listacc.md'
   - Version: '../'
