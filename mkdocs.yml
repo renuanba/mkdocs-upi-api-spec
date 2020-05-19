@@ -1,0 +1,12 @@
+site_name: UPI Specs
+repo_url: 'https://github.com/renuanba/mkdocs-upi-api-spec.git'
+edit_uri: ''
+
+plugins:
+  - search
+  - mkdocs-versioning:
+      version: 1.0.0
+
+nav:
+  - Home: 'index.md'
+  - Version: '../'
