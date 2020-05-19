@@ -1,0 +1,1 @@
+# mkdocs-upi-api-spec
