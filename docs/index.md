@@ -30,5 +30,5 @@ All APIs have same ack response as given below:
 
 |     Name      |  Version No. |  Date        |  Description    |
 |---------------|--------------|--------------|-----------------|
-| UPI API SPECS |      1.0.0   |  15-May-2019 | Home - index.md |
+| UPI API SPECS |      1.0.0   |  18-May-2020 | Home - index.md |
 
