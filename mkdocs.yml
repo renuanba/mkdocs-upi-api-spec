@@ -1,14 +1,28 @@
-site_name: UPI Specs
+site_name: UPI Specifications
 repo_url: 'https://github.com/renuanba/mkdocs-upi-api-spec.git'
 edit_uri: ''
 
 plugins:
   - search
   - mkdocs-versioning:
-      version: 2.1.0
+      version: 3.0.0
+
+theme:
+  name: material
+  palette:
+    primary: light blue
+    accent: light blue
+  logo: small_logo.png
+  favicon: small_logo.png
+
+markdown_extensions:
+  - codehilite
+  - admonition
 
 nav:
   - Home: 'index.md'
   - Meta APIs:
       - List Accounts: 'listacc.md'
+  - Release Notes: 'releasenotes.md'
   - Version: '../'
+
