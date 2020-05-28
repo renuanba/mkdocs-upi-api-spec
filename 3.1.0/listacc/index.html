@@ -1,0 +1,480 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../small_logo.png">
+      <meta name="generator" content="mkdocs-1.1.1, mkdocs-material-5.2.0">
+    
+    
+      
+        <title>List Accounts - UPI Specifications - 3.1.0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.18ac144a.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.616af814.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#03a9f4">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#list-accounts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="UPI Specifications - 3.1.0" class="md-header-nav__button md-logo" aria-label="UPI Specifications - 3.1.0">
+      
+  <img src="../small_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            UPI Specifications - 3.1.0
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              List Accounts
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/renuanba/mkdocs-upi-api-spec.git" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UPI Specifications - 3.1.0" class="md-nav__button md-logo" aria-label="UPI Specifications - 3.1.0">
+      
+  <img src="../small_logo.png" alt="logo">
+
+    </a>
+    UPI Specifications - 3.1.0
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/renuanba/mkdocs-upi-api-spec.git" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Meta APIs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Meta APIs" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Meta APIs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="List Accounts" class="md-nav__link md-nav__link--active">
+      List Accounts
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../releasenotes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.././" title="Version" class="md-nav__link">
+      Version
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="list-accounts"><strong>List Accounts</strong></h1>
+<p>PSPs to find the list of accounts linked to the mobile or Adhaar by a particular account
+provider. If the destination bank name is not known details of account provider will be
+fetched from central mapper.
+As part of ATM PIN introduction, the issuer bank has to respond with new cred block with
+subtype as ATM PIN, its type and length, where PIN length can be 4 or 6 digits. This info
+will be used to capture ATM PIN in the common library.</p>
+<p><br /></p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">ReqListAccount</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;upi:ReqListAccount</span> <span class="na">xmlns:upi=</span><span class="s">&quot;http://npci.org/upi/schema/&quot;</span><span class="nt">&gt;</span>                                                            
+    <span class="nt">&lt;Head</span> <span class="na">ver=</span><span class="s">&quot;1.0|2.0&quot;</span> <span class="na">ts=</span><span class="s">&quot;&quot;</span> <span class="na">orgId=</span><span class="s">&quot;&quot;</span> <span class="na">msgId=</span><span class="s">&quot;&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;Txn</span> <span class="na">id=</span><span class="s">&quot;&quot;</span> <span class="na">note=</span><span class="s">&quot;&quot;</span> <span class="na">refId=</span><span class="s">&quot;&quot;</span> <span class="na">refUrl=</span><span class="s">&quot;&quot;</span> <span class="na">ts=</span><span class="s">&quot;&quot;</span> <span class="na">type=</span><span class="s">&quot;ListAccount&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;Link</span> <span class="na">type=</span><span class="s">&quot;MOBILE|AADHAAR&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;Payer</span> <span class="na">addr=</span><span class="s">&quot;&quot;</span> <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">seqNum=</span><span class="s">&quot;&quot;</span> <span class="na">type=</span><span class="s">&quot;PERSON|ENTITY&quot;</span> <span class="na">code=</span><span class="s">&quot;&quot;</span> 
+<span class="hll">           <span class="na">aadhaarConsent=</span><span class="s">&quot;Y|N&quot;</span> <span class="nt">&gt;</span>
+</span>        <span class="nt">&lt;Device&gt;</span>
+            <span class="nt">&lt;Tag</span> <span class="na">name=</span><span class="s">&quot;MOBILE&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Tag</span> <span class="na">name=</span><span class="s">&quot;GEOCODE&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Tag</span> <span class="na">name=</span><span class="s">&quot;LOCATION&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Tag</span> <span class="na">name=</span><span class="s">&quot;IP&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Tag</span> <span class="na">name=</span><span class="s">&quot;TYPE&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Tag</span> <span class="na">name=</span><span class="s">&quot;ID&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Tag</span> <span class="na">name=</span><span class="s">&quot;OS&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Tag</span> <span class="na">name=</span><span class="s">&quot;APP&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Tag</span> <span class="na">name=</span><span class="s">&quot;CAPABILITY&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+<span class="hll">            <span class="nt">&lt;Tag</span> <span class="na">name=</span><span class="s">&quot;TELECOM&quot;</span> <span class="na">value=</span><span class="s">&quot;Airtel|Vodafone&quot;</span><span class="nt">/&gt;</span>
+</span>        <span class="nt">&lt;/Device&gt;</span>
+        <span class="nt">&lt;Ac</span> <span class="na">addrType=</span><span class="s">&quot;ACCOUNT&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Detail</span> <span class="na">name=</span><span class="s">&quot;IFSC&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Ac&gt;</span>
+    <span class="nt">&lt;/Payer&gt;</span>
+<span class="nt">&lt;/upi:ReqListAccount&gt;</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">RespListAccount</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;upi:RespListAccount</span> <span class="na">xmlns:upi=</span><span class="s">&quot;http://npci.org/upi/schema/&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Head</span> <span class="na">ver=</span><span class="s">&quot;1.0|2.0&quot;</span> <span class="na">ts=</span><span class="s">&quot;&quot;</span> <span class="na">orgId=</span><span class="s">&quot;&quot;</span> <span class="na">msgId=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Txn</span> <span class="na">id=</span><span class="s">&quot;&quot;</span> <span class="na">note=</span><span class="s">&quot;&quot;</span> <span class="na">refId=</span><span class="s">&quot;&quot;</span> <span class="na">refUrl=</span><span class="s">&quot;&quot;</span> <span class="na">ts=</span><span class="s">&quot;&quot;</span> <span class="na">type=</span><span class="s">&quot;ListAccount&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;Resp</span> <span class="na">reqMsgId=</span><span class="s">&quot;&quot;</span> <span class="na">result=</span><span class="s">&quot;SUCCESS|FAILURE&quot;</span> <span class="na">errCode=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;AccountList&gt;</span>
+<span class="hll">        <span class="nt">&lt;Account</span> <span class="na">accType=</span><span class="s">&quot;SAVINGS|CURRENT|DEFAULT|NRE|NRO|CREDIT|PPIWALLET|BANKWALLET|SOD|UOD&quot;</span> 
+</span>                 <span class="na">mbeba=</span><span class="s">&quot;&quot;</span> <span class="na">accRefNumber=</span><span class="s">&quot;&quot;</span> <span class="na">maskedAccnumber=</span><span class="s">&quot;&quot;</span> <span class="na">ifsc=</span><span class="s">&quot;HDFC0000101&quot;</span> <span class="na">mmid=</span><span class="s">&quot;9056014&quot;</span> 
+                 <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">aeba=</span><span class="s">&quot;Y|N&quot;</span> <span class="na">aadhaarNo=</span><span class="s">&quot;1234 5678 9012&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;CredsAllowed</span> <span class="na">type=</span><span class="s">&quot;PIN&quot;</span> <span class="na">subType=</span><span class="s">&quot;ATMPIN&quot;</span> <span class="na">dType=</span><span class="s">&quot;&quot;</span> <span class="na">dLength=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Account&gt;</span>
+<span class="hll">        <span class="nt">&lt;Account</span> <span class="na">accType=</span><span class="s">&quot;SAVINGS|CURRENT|DEFAULT|NRE|NRO|CREDIT|PPIWALLET|BANKWALLET|SOD|UOD&quot;</span> 
+</span>                 <span class="na">mbeba=</span><span class="s">&quot;&quot;</span> <span class="na">accRefNumber=</span><span class="s">&quot;&quot;</span> <span class="na">maskedAccnumber=</span><span class="s">&quot;&quot;</span> <span class="na">ifsc=</span><span class="s">&quot;HDFC0000103&quot;</span> <span class="na">mmid=</span><span class="s">&quot;9056114&quot;</span> 
+                 <span class="na">name=</span><span class="s">&quot;&quot;</span> <span class="na">aeba=</span><span class="s">&quot;Y|N&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;CredsAllowed</span> <span class="na">type=</span><span class="s">&quot;PIN&quot;</span> <span class="na">subType=</span><span class="s">&quot; MPIN&quot;</span> <span class="na">dType=</span><span class="s">&quot;&quot;</span> <span class="na">dLength=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;CredsAllowed</span> <span class="na">type=</span><span class="s">&quot;PIN&quot;</span> <span class="na">subType=</span><span class="s">&quot;ATMPIN&quot;</span> <span class="na">dType=</span><span class="s">&quot;&quot;</span> <span class="na">dLength=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;CredsAllowed</span> <span class="na">type=</span><span class="s">&quot;OTP&quot;</span> <span class="na">subType=</span><span class="s">&quot;SMS&quot;</span> <span class="na">dType=</span><span class="s">&quot;&quot;</span> <span class="na">dLength=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Account&gt;</span>
+    <span class="nt">&lt;/AccountList&gt;</span>
+<span class="nt">&lt;/upi:RespListAccount&gt;</span>
+</code></pre></div>
+
+</div>
+</div>
+<details><summary style="font-size:14pt">Tag Description</summary>
+    <table>
+        <tr><th style="background-color:DodgerBlue">Tag Num</th><th style="background-color:DodgerBlue">Message Item</th><th style="background-color:DodgerBlue">XML Tag</th><th style="background-color:DodgerBlue">Occurrence</th></tr>
+        <tr><td>24.1</td><td>Linked account list</td><td>&lt;Link&gt;</td><td>1..1</td></tr>
+        <tr><td>24.1.2</td><td>Account linkage to Mobile/Aadhaar </td><td>type</td><td>1..1</td></tr>
+        <tr><td>24.1.3</td><td>Mobile or Aadhaar Number</td><td>value</td><td>1..1</td></tr>
+        <tr><td><mark>24.1.4</mark></td><td><mark>Aadhaar Consent</mark></td><td><mark>aadhaarConsent</mark></td><td><mark>1..1</mark></td></tr>
+        <tr><td><mark>24.1.5</mark></td><td><mark>TELECOM Operator</mark></td><td><mark>value</mark></td><td><mark>1..n</mark></td></tr>
+    </table>
+</details>
+
+<details><summary style="font-size:14pt">Error and Response Codes</summary>
+<table cellpadding=".5px">
+    <tr><th style="background-color:DodgerBlue">Error Code</th><th style="background-color:DodgerBlue">Message Details</th><th style="background-color:DodgerBlue">Element/Tag</th><th style="background-color:DodgerBlue">Attribute</th></tr>
+    <tr><td>U17</td><td>PSP IS NOT REGISTERED</td><td>&lt;Head/&gt;</td><td>orgId </td></tr>
+    <tr><td>U52</td><td>PSP ORGID NOT FOUND</td><td>&lt;Head/&gt;</td><td>orgId </td></tr>
+    <tr><td>Z02</td><td>VER NUMERIC/DECIMAL MIN LENGTH 1 MAX LENGTH 6</td><td>&lt;Head/&gt;</td><td>ver </td></tr>
+    <tr><td>Z03</td><td>TS MUST BE ISO_ZONE FORMAT</td><td>&lt;Head/&gt;</td><td>ts </td></tr>
+    <tr><td>Z06</td><td>MSGID MUST BE PRESENT MAXLENGTH 35</td><td>&lt;Head/&gt;</td><td>msgId </td></tr>
+    <tr><td>P01</td><td>PAYER NOT PRESENT</td><td>&lt;Payer/&gt;</td><td></td></tr>
+    <tr><td>P02</td><td>PAYER.ADDR MUST BE VALID VPA MAXLENGTH 255</td><td></td><td>addr</td></tr>
+    <tr><td>P03</td><td>PAYER.NAME ALPHANUMERIC MINLEGTH 1 MAXLENGTH 99</td><td></td><td>name</td></tr>
+    <tr><td>P04</td><td>PAYER.SEQNUM NUMERIC MINLEGTH 1 MAXLENGTH 3</td><td></td><td>seqNum</td></tr>
+    <tr><td>P05</td><td>PAYER.TYPE MUST BE PRESENT/VALID</td><td></td><td>type</td></tr>
+    <tr><td>P06</td><td>PAYER.CODE NUMERIC OF LENGTH 4</td><td></td><td>code</td></tr>
+    <tr><td><mark>P09</mark></td><td><mark>PAYER.AADHAARCONSENT MUST BE PRESENT</mark></td><td></td><td><mark>aadhaarConsent</mark></td></tr>
+    <tr><td>Y01</td><td>LINK NOT PRESENT</td><td>&lt;Link/&gt;</td><td></td></tr>
+    <tr><td>Y02</td><td>LINK.TYPE MUST BE PRESENT/VALID</td><td></td><td>type</td></tr>
+    <tr><td>Y03</td><td>LINK.VALUE MUST BE PRESENT/VALID</td><td></td><td>value</td></tr>
+</table>
+</details>
+
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul>
+<li>mbeba flag is used to mention the UPI PIN availability</li>
+<li>If user consent for Aadhaar (aadhaarConsent) is "Y" and aeba="Y" then bank should send the Aadhaar no. </li>
+<li>Masked account.no should be masked with capital letter "X"</li>
+</ul>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href=".." title="Home" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../releasenotes/" title="Release Notes" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Release Notes
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
