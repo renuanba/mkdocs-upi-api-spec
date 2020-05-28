@@ -1,6 +1,9 @@
 # **Release Notes**
 ___________________
 
+### **Version 3.1.0**
+* Created tabbed look for Req and Resp APIs in *List Accounts* Page
+
 ### **Version 3.0.0**
 * Changed to Material Theme, Added extensions and Highlights changes
 * Added *Release Notes* Page

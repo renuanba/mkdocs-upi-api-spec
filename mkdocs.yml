@@ -5,7 +5,7 @@ edit_uri: ''
 plugins:
   - search
   - mkdocs-versioning:
-      version: 3.0.0
+      version: 3.1.0
 
 theme:
   name: material
@@ -18,6 +18,8 @@ theme:
 markdown_extensions:
   - codehilite
   - admonition
+  - pymdownx.tabbed
+  - pymdownx.superfences
 
 nav:
   - Home: 'index.md'

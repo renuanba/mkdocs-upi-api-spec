@@ -8,33 +8,55 @@ will be used to capture ATM PIN in the common library.
 
 <br />
 
-## **ReqListAccount**
+=== "ReqListAccount"
+    ```xml  hl_lines="6 17"
+    <upi:ReqListAccount xmlns:upi="http://npci.org/upi/schema/">                                                            
+        <Head ver="1.0|2.0" ts="" orgId="" msgId="" />
+        <Txn id="" note="" refId="" refUrl="" ts="" type="ListAccount" />
+        <Link type="MOBILE|AADHAAR" value="" />
+        <Payer addr="" name="" seqNum="" type="PERSON|ENTITY" code="" 
+               aadhaarConsent="Y|N" >
+            <Device>
+                <Tag name="MOBILE" value=""/>
+                <Tag name="GEOCODE" value=""/>
+                <Tag name="LOCATION" value=""/>
+                <Tag name="IP" value=""/>
+                <Tag name="TYPE" value=""/>
+                <Tag name="ID" value=""/>
+                <Tag name="OS" value=""/>
+                <Tag name="APP" value=""/>
+                <Tag name="CAPABILITY" value=""/>
+                <Tag name="TELECOM" value="Airtel|Vodafone"/>
+            </Device>
+            <Ac addrType="ACCOUNT">
+                <Detail name="IFSC" value=""/>
+            </Ac>
+        </Payer>
+    </upi:ReqListAccount>
+    ```
 
-```xml  hl_lines="6 17"
-<upi:ReqListAccount xmlns:upi="http://npci.org/upi/schema/">                                                            
-    <Head ver="1.0|2.0" ts="" orgId="" msgId="" />
-    <Txn id="" note="" refId="" refUrl="" ts="" type="ListAccount" />
-    <Link type="MOBILE|AADHAAR" value="" />
-    <Payer addr="" name="" seqNum="" type="PERSON|ENTITY" code="" 
-           aadhaarConsent="Y|N" >
-        <Device>
-            <Tag name="MOBILE" value=""/>
-            <Tag name="GEOCODE" value=""/>
-            <Tag name="LOCATION" value=""/>
-            <Tag name="IP" value=""/>
-            <Tag name="TYPE" value=""/>
-            <Tag name="ID" value=""/>
-            <Tag name="OS" value=""/>
-            <Tag name="APP" value=""/>
-            <Tag name="CAPABILITY" value=""/>
-            <Tag name="TELECOM" value="Airtel|Vodafone"/>
-        </Device>
-        <Ac addrType="ACCOUNT">
-            <Detail name="IFSC" value=""/>
-        </Ac>
-    </Payer>
-</upi:ReqListAccount>
-```
+=== "RespListAccount"
+    ```xml hl_lines="6 11"
+    <upi:RespListAccount xmlns:upi="http://npci.org/upi/schema/">
+        <Head ver="1.0|2.0" ts="" orgId="" msgId=""/>
+        <Txn id="" note="" refId="" refUrl="" ts="" type="ListAccount"/>
+        <Resp reqMsgId="" result="SUCCESS|FAILURE" errCode=""/>
+        <AccountList>
+            <Account accType="SAVINGS|CURRENT|DEFAULT|NRE|NRO|CREDIT|PPIWALLET|BANKWALLET|SOD|UOD" 
+                     mbeba="" accRefNumber="" maskedAccnumber="" ifsc="HDFC0000101" mmid="9056014" 
+                     name="" aeba="Y|N" aadhaarNo="1234 5678 9012">
+                <CredsAllowed type="PIN" subType="ATMPIN" dType="" dLength=""/>
+            </Account>
+            <Account accType="SAVINGS|CURRENT|DEFAULT|NRE|NRO|CREDIT|PPIWALLET|BANKWALLET|SOD|UOD" 
+                     mbeba="" accRefNumber="" maskedAccnumber="" ifsc="HDFC0000103" mmid="9056114" 
+                     name="" aeba="Y|N">
+                <CredsAllowed type="PIN" subType=" MPIN" dType="" dLength=""/>
+                <CredsAllowed type="PIN" subType="ATMPIN" dType="" dLength=""/>
+                <CredsAllowed type="OTP" subType="SMS" dType="" dLength=""/>
+            </Account>
+        </AccountList>
+    </upi:RespListAccount>
+    ```
 
 <details><summary style="font-size:14pt">Tag Description</summary>
     <table>
@@ -46,32 +68,6 @@ will be used to capture ATM PIN in the common library.
         <tr><td><mark>24.1.5</mark></td><td><mark>TELECOM Operator</mark></td><td><mark>value</mark></td><td><mark>1..n</mark></td></tr>
     </table>
 </details>
-
-<br />
-
-## **RespListAccount**
-
-```xml hl_lines="6 12"
-<upi:RespListAccount xmlns:upi="http://npci.org/upi/schema/">
-    <Head ver="1.0|2.0" ts="" orgId="" msgId=""/>
-    <Txn id="" note="" refId="" refUrl="" ts="" type="ListAccount"/>
-    <Resp reqMsgId="" result="SUCCESS|FAILURE" errCode=""/>
-    <AccountList>
-        <Account accType="SAVINGS|CURRENT|DEFAULT|NRE|NRO|CREDIT|PPIWALLET|BANKWALLET|SOD|UOD" 
-                 mbeba="" accRefNumber="" maskedAccnumber="" ifsc="HDFC0000101" mmid="9056014" 
-                 name="" aeba="Y|N" aadhaarNo="1234 5678 9012">
-            <CredsAllowed type="PIN" subType="ATMPIN" dType="" dLength=""/>
-        </Account>
-        <Account accType="SAVINGS|CURRENT|DEFAULT|NRE|NRO|CREDIT|PPIWALLET|BANKWALLET|SOD|UOD" 
-                 mbeba="" accRefNumber="" maskedAccnumber="" ifsc="HDFC0000103" mmid="9056114" 
-                 name="" aeba="Y|N">
-            <CredsAllowed type="PIN" subType=" MPIN" dType="" dLength=""/>
-            <CredsAllowed type="PIN" subType="ATMPIN" dType="" dLength=""/>
-            <CredsAllowed type="OTP" subType="SMS" dType="" dLength=""/>
-        </Account>
-    </AccountList>
-</upi:RespListAccount>
-```
 
 <details><summary style="font-size:14pt">Error and Response Codes</summary>
 <table cellpadding=".5px">
